@@ -11,6 +11,7 @@ namespace Tasks_PolessUP
         public void Task_1()
         {
             Console.WriteLine("Task 1: \n");
+
             Console.WriteLine(" +\"\"\"\"\"+");
             Console.WriteLine("(| o o |)");
             Console.WriteLine(" |  ^  |");
@@ -19,7 +20,8 @@ namespace Tasks_PolessUP
         }
         public int[] Task_2(int[] arrayNums, int target)
         {
-            Console.WriteLine("\nTask 2: \n");
+            Console.WriteLine("\nTask 2: ");
+
             int[] index = new int[2];
             for (int i = 0; i < arrayNums.Length; i++)
             {
@@ -37,5 +39,53 @@ namespace Tasks_PolessUP
             return index;
 
         }
+        public int Task_3(int[] array, int target)
+        {
+            List<int> listSort = array.ToList();
+            listSort.Sort();
+            int[] arraySort = listSort.ToArray();
+            for (int i = 0; i < arraySort.Length; i++)
+            {
+                if (arraySort[i] == target)
+                {
+                    return i;
+                }
+            }
+            for (int i = 0; i < arraySort.Length; i++)
+            {
+                for (int j = 0; j < arraySort.Length; j++)
+                {
+                    if (target - i == arraySort[j])
+                    {
+                        return j + 1;
+                    }
+                }
+            }
+            if (target <= 0)
+            {
+                return 0;
+            }
+            return arraySort.Length;
+        }
+
+        public int Task_4(int[] nums)
+        {
+            List<int> listSort = nums.ToList();
+            listSort.Sort();
+            int[] arraySort = listSort.ToArray();
+            return arraySort[arraySort.Length - 3];
+        }
+        public int Task_5(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == nums.Max())
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
+
     }
 }
