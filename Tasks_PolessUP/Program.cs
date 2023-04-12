@@ -29,6 +29,9 @@ namespace Tasks_PolessUP
             answer = task.Task_5(array);
             Console.WriteLine("\nTask 5: \nindex: " + answer);
 
+            string answerString;
+            answerString = task.Task_6(21.13);
+            Console.WriteLine("\nTask 6: \nindex: " + answerString);
 
             Console.ReadLine();
         }

@@ -86,6 +86,30 @@ namespace Tasks_PolessUP
             }
             return 0;
         }
+        public string Task_6(double num)
+        {
+            string[] numWords = new string[] {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "point" };
+
+            string numString = num.ToString();
+            string answer = "";
+
+            for (int i = 0; i < numString.Length; i++)
+            {
+                if (numString[i] != '.' && numString[i] != ',')
+                {
+                    answer += numWords[Convert.ToInt32(numString[i].ToString())] + " ";
+
+                }
+                else
+                {
+                    answer += numWords[10] + " ";
+                }
+            }
+
+            return answer;
+
+        }
+
 
     }
 }
