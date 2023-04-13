@@ -27,11 +27,14 @@ namespace Tasks_PolessUP
             Console.WriteLine("\nTask 4: \nAnswer: " + answer);
 
             answer = task.Task_5(array);
-            Console.WriteLine("\nTask 5: \nindex: " + answer);
+            Console.WriteLine("\nTask 5: \nAnswer: " + answer);
 
             string answerString;
             answerString = task.Task_6(21.13);
-            Console.WriteLine("\nTask 6: \nindex: " + answerString);
+            Console.WriteLine("\nTask 6: \nAnswer: " + answerString);
+
+            answer = task.Task_7(2017);
+            Console.WriteLine("\nTask 7: \nAnswer: " + answer);
 
             Console.ReadLine();
         }

@@ -110,6 +110,35 @@ namespace Tasks_PolessUP
 
         }
 
+        public int Task_7(int num)
+        {
+            string numString = num.ToString();
+            int[] numArray = new int[numString.Length];
+            for (int i = 0; i < numString.Length; i++)
+            {
+                numArray[i] = Convert.ToInt32(numString[i].ToString());
+            }
+            int max = numArray.Max();
+            int buff;
+            for (int i = 1; i < numArray.Length; i++)
+            {
+                if (max == numArray[i])
+                {
+                    buff = numArray[i - 1];
+                    numArray[i - 1] = max;
+                    numArray[i] = buff;
+                    numString = "";
+                    for (int j = 0; j < numArray.Length; j++)
+                    {
+                        numString += numArray[j].ToString();
+
+                    }
+                    int answer = Convert.ToInt32(numString);
+                    return answer;
+                }
+            }
+            return 0;
+        }
 
     }
 }
