@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,10 @@ namespace Tasks_PolessUP
 
             answer = task.Task_7(2017);
             Console.WriteLine("\nTask 7: \nAnswer: " + answer);
+
+            answerString = task.Task_8("(255, 255, 255)");
+            Console.WriteLine("\nTask 8: \nAnswer: " + answerString);
+
 
             Console.ReadLine();
         }

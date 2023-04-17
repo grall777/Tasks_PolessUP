@@ -139,6 +139,28 @@ namespace Tasks_PolessUP
             }
             return 0;
         }
+        public string Task_8(string colorRGB)
+        {
+            colorRGB = colorRGB.Replace('(', ' ');
+            colorRGB = colorRGB.Replace(')', ' ');
+            string[] colorRGBstring = colorRGB.Split(',');
+            int[] colorRGBint = new int[colorRGBstring.Length];
+            string hex = "";
+            for (int i = 0; i < colorRGBstring.Length; i++)
+            {
+                colorRGBint[i] = Convert.ToInt32(colorRGBstring[i]);
+                if (colorRGBint[i] > 255)
+                {
+                    colorRGBint[i] = 255;
+                }
+                if (colorRGBint[i] < 0)
+                {
+                    colorRGBint[i] = 0;
+                }
+                hex += colorRGBint[i].ToString("X2");
+            }
+            return hex;
+        }
 
     }
 }
