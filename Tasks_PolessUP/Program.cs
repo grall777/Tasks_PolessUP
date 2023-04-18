@@ -40,6 +40,9 @@ namespace Tasks_PolessUP
             answerString = task.Task_8("(255, 255, 255)");
             Console.WriteLine("\nTask 8: \nAnswer: " + answerString);
 
+            bool answerBool = task.Task_9(2015);
+            Console.WriteLine("\nTask 9: \nAnswer: " + answerBool);
+
 
             Console.ReadLine();
         }

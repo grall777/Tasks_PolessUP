@@ -162,5 +162,19 @@ namespace Tasks_PolessUP
             return hex;
         }
 
+        public bool Task_9(int year)
+        {
+            bool answer;
+            if (year % 4 == 0)
+            {
+                answer = true;
+            }
+            else
+            {
+                answer = false;
+            }
+            return answer;
+        }
+
     }
 }
