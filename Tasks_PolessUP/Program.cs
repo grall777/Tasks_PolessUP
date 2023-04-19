@@ -43,6 +43,9 @@ namespace Tasks_PolessUP
             bool answerBool = task.Task_9(2015);
             Console.WriteLine("\nTask 9: \nAnswer: " + answerBool);
 
+            answer = task.Task_10(2, 3, 5);
+            Console.WriteLine("\nTask 10: \nAnswer: " + answer);
+
 
             Console.ReadLine();
         }

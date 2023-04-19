@@ -175,6 +175,16 @@ namespace Tasks_PolessUP
             }
             return answer;
         }
+        public int Task_10(int a, int r, int n)
+        {
+            int sum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                sum += a + r * i;
+            }
+
+            return sum;
+        }
 
     }
 }
