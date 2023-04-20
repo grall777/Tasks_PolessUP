@@ -21,7 +21,7 @@ namespace Tasks_PolessUP
 
             int[] array = new int[] { 1, 3, 5, 6 };
             int index = task.Task_3(array, 5);
-            Console.WriteLine("\nTask 3: \nIndex: " + indicesArray);
+            Console.WriteLine("\nTask 3: \nIndex: " + index);
 
 
             int answer = task.Task_4(array);
@@ -45,6 +45,13 @@ namespace Tasks_PolessUP
 
             answer = task.Task_10(2, 3, 5);
             Console.WriteLine("\nTask 10: \nAnswer: " + answer);
+
+            nums = task.Task_11(nums);
+            Console.WriteLine("\nTask 11: \nAnswer: ");
+            foreach (var num in nums)
+            {
+                Console.Write(num + " ");
+            }
 
 
             Console.ReadLine();

@@ -186,5 +186,25 @@ namespace Tasks_PolessUP
             return sum;
         }
 
+        public int[] Task_11(int[] nums)
+        {
+            int buff;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 0; j < nums.Length; j++)
+                {
+                    if (nums[i] < nums[j])
+                    {
+                        buff = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = buff;
+                    }
+
+                }
+            }
+            return nums;
+        }
+
     }
 }
