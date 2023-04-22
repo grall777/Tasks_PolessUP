@@ -206,5 +206,30 @@ namespace Tasks_PolessUP
             return nums;
         }
 
+        public int Task_13(string version_1, string version_2)
+        {
+            string[] versionArray_1 = version_1.Split('.');
+            string[] versionArray_2 = version_2.Split('.');
+            for (int i = 0; i < version_1.Length; i++)
+            {
+                if (Convert.ToInt32(versionArray_1[i]) > Convert.ToInt32(versionArray_2[i]))
+                {
+                    return 1;
+                }
+                if (Convert.ToInt32(versionArray_1[i]) < Convert.ToInt32(versionArray_2[i]))
+                {
+                    return -1;
+                }
+            }
+            if (versionArray_1.Length < versionArray_2.Length)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
     }
 }

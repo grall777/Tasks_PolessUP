@@ -53,6 +53,9 @@ namespace Tasks_PolessUP
                 Console.Write(num + " ");
             }
 
+            answer = task.Task_13("2.5.33", "01.1");
+            Console.WriteLine("\n\nTask 13: \nAnswer: " + answer);
+
 
             Console.ReadLine();
         }
