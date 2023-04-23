@@ -206,6 +206,32 @@ namespace Tasks_PolessUP
             return nums;
         }
 
+        public bool Task_12(string ISBN)
+        {
+            ISBN = ISBN.Replace("-", "");
+            int checkSum = 0;
+            for (int i = 0, j = 10; i < ISBN.Length; i++, j--)
+            {
+                if (ISBN[i] != 'X' && ISBN[i] != 'x')
+                {
+                    checkSum += Convert.ToInt32(Convert.ToString(ISBN[i])) * j;
+                }
+                else
+                {
+                    checkSum += 10 * j;
+                }
+            }
+
+            if (checkSum % 11 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public int Task_13(string version_1, string version_2)
         {
             string[] versionArray_1 = version_1.Split('.');

@@ -53,8 +53,12 @@ namespace Tasks_PolessUP
                 Console.Write(num + " ");
             }
 
+            answerBool = task.Task_12("3-598-21507-X");
+            Console.WriteLine("\n\nTask 12: \nAnswer: " + answerBool);
+
+
             answer = task.Task_13("2.5.33", "01.1");
-            Console.WriteLine("\n\nTask 13: \nAnswer: " + answer);
+            Console.WriteLine("\nTask 13: \nAnswer: " + answer);
 
 
             Console.ReadLine();
