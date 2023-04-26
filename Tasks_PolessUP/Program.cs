@@ -60,6 +60,8 @@ namespace Tasks_PolessUP
             answer = task.Task_13("2.5.33", "01.1");
             Console.WriteLine("\nTask 13: \nAnswer: " + answer);
 
+            answer = task.Task_15("abaacc");
+            Console.WriteLine("\nTask 15: \nAnswer: " + answer);
 
             Console.ReadLine();
         }

@@ -257,5 +257,34 @@ namespace Tasks_PolessUP
             }
         }
 
+        public int Task_15(string s)
+        {
+            char[] s_Chars = s.ToCharArray();
+            List<int> Counts = new List<int>();
+            Array.Sort(s_Chars);
+            int min = 0, max = 0, buff = 0;
+            for (int i = 0; i < s_Chars.Length; i++)
+            {
+                for (int j = i; j < s_Chars.Length; j++)
+                {
+                    if (s_Chars[i] == s_Chars[j])
+                    {
+                        buff++;
+                    }
+                    else
+                    {
+                        i = j - 1;
+                        Counts.Add(buff);
+                        buff = 0;
+                        break;
+                    }
+                }
+            }
+            Counts.Sort();
+            max = Counts[Counts.Count - 1];
+            min = Counts[0];
+            return max - min;
+        }
+
     }
 }
