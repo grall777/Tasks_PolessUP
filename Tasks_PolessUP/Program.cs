@@ -63,6 +63,9 @@ namespace Tasks_PolessUP
             answer = task.Task_15("abaacc");
             Console.WriteLine("\nTask 15: \nAnswer: " + answer);
 
+            string[] ansStrings = task.Task_17("a1b1");
+            Console.WriteLine(string.Join(" ", ansStrings));
+
             Console.ReadLine();
         }
     }

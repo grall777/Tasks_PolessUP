@@ -286,5 +286,25 @@ namespace Tasks_PolessUP
             return max - min;
         }
 
+        public string[] Task_17(string s)
+        {
+            string s_Upper = s.ToUpper();
+            char[] sBuff;
+            List<string> sList = new List<string>();
+            sList.Add(s);
+            sList.Add(s_Upper);
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] >= 65)
+                {
+                    sBuff = s.ToCharArray();
+                    sBuff[i] = char.ToUpper(s[i]);
+                    sList.Add(string.Join("", sBuff));
+                }
+                sBuff = s.ToCharArray();
+            }
+            return sList.ToArray();
+        }
+
     }
 }
